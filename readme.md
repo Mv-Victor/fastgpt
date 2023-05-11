@@ -36,7 +36,7 @@ method: 'POST'
 ```
 ##### requestParams:
 **'message'**, type=str, 含义是查询语句  
-**''**, default='ernie-base', type=str， 含义是嵌入模型，目前支持"ernie-tiny"、"ernie-base"、"text2vec"
+**'model'**, default='ernie-base', type=str， 含义是嵌入模型，目前支持"ernie-tiny"、"ernie-base"、"text2vec"
 
 ##### return:
 {'message_vec':vec, 'message':message}  
@@ -69,5 +69,7 @@ curl -X POST "localhost:5001/v1/doc_embeddings" -H 'Content-Type: application/js
 ```
 
 # 腾讯云镜像仓库拉取
+```shell
 docker pull ccr.ccs.tencentyun.com/aha_zjut/fastgpt:v0
+```
 
